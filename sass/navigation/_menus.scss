@@ -395,6 +395,9 @@ button.menu-toggle {
 			overflow: hidden;
 			opacity: 0;
 			z-index: 1;
+			@media (max-width: 480px) {
+				display: none;
+			}
 		}
 		.nav-previous {
 			.post-nav-title {

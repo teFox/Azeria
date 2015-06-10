@@ -25,3 +25,24 @@ h5 {
 h6 {
 	@include font-size(1.2);
 }
+
+@media (max-width: 767px) {
+	h1 {
+		@include font-size(1.8);
+	}
+	h2 {
+		@include font-size(1.6);
+	}
+	h3 {
+		@include font-size(1.4);
+	}
+	h4 {
+		@include font-size(1.2);
+	}
+	h5 {
+		@include font-size(1.1);
+	}
+	h6 {
+		@include font-size(1);
+	}
+}

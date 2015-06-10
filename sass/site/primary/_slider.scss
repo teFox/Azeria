@@ -117,6 +117,9 @@
 		border-radius: 0;
 		font-weight: normal;
 		overflow: hidden;
+		@media (max-width: 480px) {
+			display: none !important;
+		}
 		&:before {
 			display: block;
 			font-family: FontAwesome;
@@ -150,6 +153,9 @@
 		text-align: center;
 		@media (max-width: 1109px) {
 			bottom: 4px;
+		}
+		@media (max-width: 480px) {
+			display: none !important;
 		}
 		li {
 			display: inline-block;
@@ -201,6 +207,9 @@
 	@media (max-width: 1109px) {
 		margin: 0 0 0 -485px;
 		bottom: 20%;
+	}
+	@media (max-width: 767px) {
+		display: none;
 	}
 	&:after {
 		clear: both;

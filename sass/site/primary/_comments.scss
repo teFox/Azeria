@@ -102,6 +102,12 @@
 	width: 33.333333%;
 	padding-left: 10px;
 	padding-right: 10px;
+	@media (max-width: 480px) {
+		float: none;
+		width: 100%;
+		padding-left: 0;
+		padding-right: 0;
+	}
 }
 
 .comment-form-author {

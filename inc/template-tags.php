@@ -492,7 +492,22 @@ function azeria_read_more() {
 
 }
 
+/**
+ * Print options-related class to determine sidebar position
+ */
 function azeria_sidebar_class() {
 	$sidebar_position = azeria_get_option( 'sidebar_position', 'right' );
 	printf( '%s-sidebar', $sidebar_position );
+}
+
+/**
+ * Show 'to top' button HTML markup
+ */
+function azeria_to_top() {
+
+	echo apply_filters( 
+		'azeria_to_top_button',
+		'<div id="back-top" class="back-top-btn"><a href="#"><i class="fa fa-angle-up"></i></a></div>'
+	);
+
 }

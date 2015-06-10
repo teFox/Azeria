@@ -43,6 +43,15 @@
 
 		});
 
+		// to top button
+		$('#back-top').on('click', 'a', function(event) {
+			event.preventDefault();
+			$('body,html').stop(false, false).animate({
+				scrollTop: 0
+			}, 800);
+			return !1;
+		});
+
 	});
 
 })(jQuery);

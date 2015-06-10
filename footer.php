@@ -34,6 +34,7 @@
 		<div class="site-info">
 			<div class="container">
 			<?php
+				azeria_to_top();
 				$azeria_custm_copyright = azeria_get_option( 'footer_copyright' );
 				if ( $azeria_custm_copyright ) {
 					echo $azeria_custm_copyright;

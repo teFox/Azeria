@@ -2106,6 +2106,24 @@ button.menu-toggle {
   background: #272727;
   line-height: 23px; }
 
+.back-top-btn a {
+  display: block;
+  margin: -34px auto 0;
+  width: 34px;
+  height: 34px;
+  border-radius: 17px;
+  background: #343434;
+  color: #fff;
+  text-decoration: none;
+  text-align: center;
+  line-height: 24px;
+  font-size: 22px;
+  outline: none; }
+  .back-top-btn a:visited {
+    color: #fff; }
+  .back-top-btn a:hover, .back-top-btn a:active, .back-top-btn a:focus {
+    color: #999; }
+
 /*--------------------------------------------------------------
 # Infinite scroll
 --------------------------------------------------------------*/

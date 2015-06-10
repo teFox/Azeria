@@ -1,0 +1,339 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Azeria 1.0.0\n"
+"POT-Creation-Date: 2015-06-09 00:02+0200\n"
+"PO-Revision-Date: 2015-06-09 00:03+0200\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: en\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.7.6\n"
+"X-Poedit-Basepath: ../\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-KeywordsList: __;_e;_x;esc_attr_e;_n;esc_html_e\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: 404.php:17
+msgid "Oops! That page can&rsquo;t be found."
+msgstr ""
+
+#: 404.php:19
+msgid ""
+"It looks like nothing was found at this location. Maybe try to use a search?"
+msgstr ""
+
+#: comments.php:38 comments.php:60
+msgid "Comment navigation"
+msgstr ""
+
+#: comments.php:76
+msgid "Comments are closed."
+msgstr ""
+
+#: comments.php:81
+msgid "Comment*"
+msgstr ""
+
+#: comments.php:82
+msgid "Leave a Reply"
+msgstr ""
+
+#: comments.php:83
+#, php-format
+msgid "Leave a Reply to %s"
+msgstr ""
+
+#: footer.php:42
+msgid "http://wordpress.org/"
+msgstr ""
+
+#: functions.php:222 functions.php:228 functions.php:234
+msgid "on"
+msgstr ""
+
+#: header.php:24
+msgid "Skip to content"
+msgstr ""
+
+#: header.php:35
+msgid "Menu"
+msgstr ""
+
+#: inc/customizer.php:42
+msgid "Header Logo"
+msgstr ""
+
+#: inc/customizer.php:54
+msgid "Logo Image"
+msgstr ""
+
+#: inc/customizer.php:65
+msgid "Slider"
+msgstr ""
+
+#: inc/customizer.php:76
+msgid "Enable/disable slider"
+msgstr ""
+
+#: inc/customizer.php:90 inc/customizer.php:244
+msgid "Slider visibility"
+msgstr ""
+
+#: inc/customizer.php:96
+msgid "Only on Front page"
+msgstr ""
+
+#: inc/customizer.php:97
+msgid "On all pages"
+msgstr ""
+
+#: inc/customizer.php:108
+msgid "Get slides from"
+msgstr ""
+
+#: inc/customizer.php:116
+msgid "Recent Posts (Default)"
+msgstr ""
+
+#: inc/customizer.php:117
+msgid "Sticky Posts (Recommended)"
+msgstr ""
+
+#: inc/customizer.php:118
+msgid "Specific Category"
+msgstr ""
+
+#: inc/customizer.php:130
+msgid "Category slug to get slides from (only if Specific Category selected)"
+msgstr ""
+
+#: inc/customizer.php:144
+msgid "Slides number to show"
+msgstr ""
+
+#: inc/customizer.php:163
+msgid "Show/hide slider banner"
+msgstr ""
+
+#: inc/customizer.php:172 inc/customizer.php:299 inc/template-actions.php:74
+#: inc/template-tags.php:489
+msgid "Read"
+msgstr ""
+
+#: inc/customizer.php:177
+msgid "Banner read more button text"
+msgstr ""
+
+#: inc/customizer.php:191
+msgid "Show/hide control arrows"
+msgstr ""
+
+#: inc/customizer.php:205
+msgid "Show/hide pager control"
+msgstr ""
+
+#: inc/customizer.php:219
+msgid "Select animation type"
+msgstr ""
+
+#: inc/customizer.php:225
+msgid "Slide"
+msgstr ""
+
+#: inc/customizer.php:226
+msgid "Fade"
+msgstr ""
+
+#: inc/customizer.php:233
+msgid "Blog"
+msgstr ""
+
+#: inc/customizer.php:250
+msgid "Only excerpt"
+msgstr ""
+
+#: inc/customizer.php:251
+msgid "Full content"
+msgstr ""
+
+#: inc/customizer.php:262
+msgid "Loop page: show featured image"
+msgstr ""
+
+#: inc/customizer.php:276
+msgid "Single page: show featured image"
+msgstr ""
+
+#: inc/customizer.php:290
+msgid "Loop page: show read more button"
+msgstr ""
+
+#: inc/customizer.php:304
+msgid "Loop page: read more button text"
+msgstr ""
+
+#: inc/customizer.php:318
+msgid "Sidebar position"
+msgstr ""
+
+#: inc/customizer.php:324
+msgid "Right"
+msgstr ""
+
+#: inc/customizer.php:325
+msgid "Left"
+msgstr ""
+
+#: inc/customizer.php:332
+msgid "Footer"
+msgstr ""
+
+#: inc/customizer.php:343
+msgid "Set custom copyright text"
+msgstr ""
+
+#: inc/customizer.php:353
+msgid "About box"
+msgstr ""
+
+#: inc/customizer.php:364
+msgid "Enable About box in sidebar"
+msgstr ""
+
+#: inc/customizer.php:373 inc/template-actions.php:172
+msgid "About Me"
+msgstr ""
+
+#: inc/customizer.php:378
+msgid "Enter sidebar about box title"
+msgstr ""
+
+#: inc/customizer.php:393
+msgid "About Image"
+msgstr ""
+
+#: inc/customizer.php:401 inc/template-actions.php:174
+msgid "Hello! And welcome to my personal website!"
+msgstr ""
+
+#: inc/customizer.php:406
+msgid "Set about box message text"
+msgstr ""
+
+#: inc/customizer.php:416
+msgid "Follow box"
+msgstr ""
+
+#: inc/customizer.php:427
+msgid "Enable Follow box in sidebar"
+msgstr ""
+
+#: inc/customizer.php:436 inc/template-actions.php:203
+msgid "Follow Me"
+msgstr ""
+
+#: inc/customizer.php:441
+msgid "Enter follow about box title"
+msgstr ""
+
+#: inc/customizer.php:464
+#, php-format
+msgid "Link to %s account:"
+msgstr ""
+
+#: inc/extras.php:82
+msgid "Facebook"
+msgstr ""
+
+#: inc/extras.php:87
+msgid "Twitter"
+msgstr ""
+
+#: inc/extras.php:92
+msgid "Google +"
+msgstr ""
+
+#: inc/extras.php:97
+msgid "Instagram"
+msgstr ""
+
+#: inc/extras.php:102
+msgid "Pinterest"
+msgstr ""
+
+#: inc/extras.php:107
+msgid "Dribbble"
+msgstr ""
+
+#: inc/extras.php:125
+msgid "Pingback:"
+msgstr ""
+
+#: inc/extras.php:125
+msgid "Edit"
+msgstr ""
+
+#: inc/extras.php:139
+msgid "ago"
+msgstr ""
+
+#: inc/extras.php:155
+msgid "Your comment is awaiting moderation."
+msgstr ""
+
+#: inc/template-actions.php:244
+msgid "Name"
+msgstr ""
+
+#: inc/template-actions.php:245
+msgid "Email"
+msgstr ""
+
+#: inc/template-actions.php:246
+msgid "Website"
+msgstr ""
+
+#: inc/template-tags.php:23
+msgid "Posts navigation"
+msgstr ""
+
+#: inc/template-tags.php:56
+msgid "Post navigation"
+msgstr ""
+
+#: inc/template-tags.php:325
+#, php-format
+msgid "Continue reading %s <span class=\"meta-nav\">&rarr;</span>"
+msgstr ""
+
+#: template-parts/content-none.php:14
+msgid "Nothing Found"
+msgstr ""
+
+#: template-parts/content-none.php:20
+#, php-format
+msgid ""
+"Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
+msgstr ""
+
+#: template-parts/content-none.php:24
+msgid ""
+"Sorry, but nothing matched your search terms. Please try again with some "
+"different keywords."
+msgstr ""
+
+#: template-parts/content-none.php:29
+msgid ""
+"It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps "
+"searching can help."
+msgstr ""
+
+#: template-parts/content-single.php:46
+msgid "Prev"
+msgstr ""
+
+#: template-parts/content-single.php:47
+msgid "Next"
+msgstr ""

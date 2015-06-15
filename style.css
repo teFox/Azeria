@@ -1,6 +1,7 @@
 @charset "UTF-8";
 /*
 Theme Name: azeria
+Theme Name: azeria
 Theme URI: http://www.tefox.net/products/azeria
 Author: teFox
 Author URI: http://www.tefox.net/
@@ -9,12 +10,12 @@ Version: 1.0.0
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: azeria
-Tags:
+Tags: light, two-columns, fluid-layout, responsive-layout, custom-background, custom-menu, featured-images, full-width-template, post-formats, sticky-post, translation-ready, photoblogging, theme-options
 
 This theme, like WordPress, is licensed under the GPL.
 Use it to make something cool, have fun, and share what you've learned with others.
 
-azeria is based on Underscores http://underscores.me/, (C) 2012-2015 Automattic, Inc.
+Azeria is based on Underscores http://underscores.me/, (C) 2012-2015 Automattic, Inc.
 Underscores is distributed under the terms of the GNU GPL v2 or later.
 
 Normalizing styles have been helped along thanks to the fine work of
@@ -773,9 +774,11 @@ button.menu-toggle {
   text-shadow: none;
   font-size: 19.5px;
   font-size: 1.5rem;
-  padding: 10px 20px;
-  margin: 5px;
-  color: #474747; }
+  padding: 15px 20px;
+  margin: 0;
+  color: #474747;
+  text-align: center;
+  width: 100%; }
   button.menu-toggle:before {
     content: "\f0c9";
     font-family: FontAwesome;
@@ -784,13 +787,14 @@ button.menu-toggle {
   button.menu-toggle:hover, button.menu-toggle:active, button.menu-toggle:focus {
     box-shadow: none;
     background: none;
-    color: #ff5400; }
+    color: #ff5400;
+    outline: none; }
   button.menu-toggle[aria-expanded="true"]:before {
     content: "\f00d"; }
 
 @media (max-width: 600px) {
   button.menu-toggle {
-    display: inline-block; }
+    display: block; }
 
   .main-navigation ul {
     display: none; } }
@@ -1636,15 +1640,17 @@ button.menu-toggle {
   clear: both;
   margin: 0 0 1.5em; }
 
-.entry-header:after {
-  clear: both;
-  width: 100%;
-  display: block;
-  content: ''; }
+.entry-header {
+  padding: 0 0 30px 0; }
+  .entry-header:after {
+    clear: both;
+    width: 100%;
+    display: block;
+    content: ''; }
 
 .entry-header-data {
   overflow: hidden;
-  margin: 0 0 30px 0; }
+  margin: 0; }
 
 .entry-title {
   padding: 3px 0 4px 0; }
@@ -1663,7 +1669,7 @@ button.menu-toggle {
   background: #ff5400;
   color: #fff;
   float: left;
-  margin: 0 20px 30px -30px; }
+  margin: 0 20px 0 -30px; }
   @media (max-width: 480px) {
     .entry-icon {
       width: 50px;
@@ -1694,7 +1700,8 @@ button.menu-toggle {
 
 .entry-thumbnail {
   margin: 0 -30px;
-  overflow: hidden; }
+  overflow: hidden;
+  clear: both; }
   .entry-thumbnail img {
     display: block; }
   .entry-thumbnail + .entry-content {
@@ -1829,7 +1836,7 @@ button.menu-toggle {
     width: auto;
     top: -30px;
     right: -30px;
-    bottom: -30px;
+    bottom: 0;
     left: -30px;
     border: 5px solid #ff5400;
     content: "";

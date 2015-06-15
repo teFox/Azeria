@@ -73,6 +73,7 @@
 }
 
 .entry-header {
+	padding: 0 0 30px 0;
 	&:after {
 		clear: both;
 		width: 100%;
@@ -83,7 +84,7 @@
 
 .entry-header-data {
 	overflow: hidden;
-	margin: 0 0 30px 0;
+	margin: 0;
 }
 
 .entry-title {
@@ -106,7 +107,7 @@
 	background: $color__link;
 	color: #fff;
 	float: left;
-	margin: 0 20px 30px -30px;
+	margin: 0 20px 0 -30px;
 	@media (max-width: 480px) {
 		width: 50px;
 		height: 50px;
@@ -144,6 +145,7 @@
 .entry-thumbnail {
 	margin: 0 -30px;
 	overflow: hidden;
+	clear: both;
 	img {
 		display: block;
 	}
@@ -273,7 +275,7 @@
 			width: auto;
 			top: -30px;
 			right: -30px;
-			bottom: -30px;
+			bottom: 0;
 			left: -30px;
 			border: 5px solid $color__link;
 			content: "";

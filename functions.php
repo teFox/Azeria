@@ -5,6 +5,10 @@
  * @package azeria
  */
 
+if ( ! isset( $content_width ) ) {
+	$content_width = 650;
+}
+
 if ( ! function_exists( 'azeria_setup' ) ) :
 /**
  * Sets up theme defaults and registers support for various WordPress features.
@@ -24,6 +28,8 @@ function azeria_setup() {
 
 	// Add default posts and comments RSS feed links to head.
 	add_theme_support( 'automatic-feed-links' );
+	// Add editor styling
+	add_editor_style( 'editor-style.css' );
 
 	/*
 	 * Let WordPress manage the document title.
@@ -125,19 +131,6 @@ endif; // azeria_setup
 add_action( 'after_setup_theme', 'azeria_setup' );
 
 /**
- * Set the content width in pixels, based on the theme's design and stylesheet.
- *
- * Priority 0 to make it available to lower priority callbacks.
- *
- * @global int $content_width
- */
-function azeria_content_width() {
-	$GLOBALS['content_width'] = apply_filters( 'azeria_content_width', 730 );
-}
-add_action( 'after_setup_theme', 'azeria_content_width', 0 );
-
-
-/**
  * Register widget area.
  *
  * @link http://codex.wordpress.org/Function_Reference/register_sidebar
@@ -189,9 +182,9 @@ add_action( 'widgets_init', 'azeria_widgets_init' );
 function azeria_assets() {
 	
 	// Styles
-	wp_enqueue_style( 'azeria-style', get_stylesheet_uri() );
 	wp_enqueue_style( 'azeria-fonts', azeria_fonts_url() );
-	wp_enqueue_style( 'azeria-font-awesome', '//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css' );
+	wp_enqueue_style( 'azeria-font-awesome', get_template_directory_uri() . '/css/font-awesome.min.css', false, '4.3.0' );
+	wp_enqueue_style( 'azeria-style', get_stylesheet_uri(), false, '1.0.0' );
 
 	// Scripts
 	wp_enqueue_script( 'azeria-slick-slider', get_template_directory_uri() . '/js/slick.js', array( 'jquery' ), '1.5.0', true );

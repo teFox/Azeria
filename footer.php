@@ -42,7 +42,7 @@
 			?>
 				<a rel="nofollow" href="<?php echo esc_url( __( 'http://wordpress.org/', 'azeria' ) ); ?>"><?php printf( esc_html__( 'Proudly powered by %s', 'azeria' ), 'WordPress' ); ?></a>
 				<span class="sep"> | </span>
-				<?php printf( esc_html__( 'Theme: %1$s by %2$s.', 'azeria' ), 'Azeria', '<a href="http://www.tefox.net/" rel="nofollow">Tefox</a>' ); ?>
+				<?php printf( __( 'Theme: %1$s by <a href="%2$s" rel="nofollow">Tefox</a>.', 'azeria' ), 'Azeria', esc_url( 'http://www.tefox.net/' ) ); ?>
 			<?php } ?>
 			</div>
 		</div><!-- .site-info -->

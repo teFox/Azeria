@@ -266,9 +266,11 @@ button.menu-toggle {
 	box-shadow: none;
 	text-shadow:none;
 	@include font-size(1.5);
-	padding: 10px 20px;
-	margin: 5px;
+	padding: 15px 20px;
+	margin: 0;
 	color: $color__text-main;
+	text-align: center;
+	width: 100%;
 	&:before {
 		content: "\f0c9";
 		font-family: FontAwesome;
@@ -281,6 +283,7 @@ button.menu-toggle {
 		box-shadow: none;
 		background: none;
 		color: $color__link;
+		outline: none;
 	}
 	&[aria-expanded="true"] {
 		&:before {
@@ -291,7 +294,7 @@ button.menu-toggle {
 
 @media (max-width: 600px) {
 	button.menu-toggle {
-		display: inline-block;
+		display: block;
 	}
 	.main-navigation ul {
 		display: none;

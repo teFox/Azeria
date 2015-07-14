@@ -5,8 +5,8 @@ Theme Name: azeria
 Theme URI: http://www.tefox.net/products/azeria
 Author: teFox
 Author URI: http://www.tefox.net/
-Description: Description
-Version: 1.0.0
+Description: Free responsive WordPress theme is here for your reference. Clean minimalistic design is free to change up to your business needs and personal wishes. It could be a pertect starting point for creating your own "home" in the web.
+Version: 1.0.1
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: azeria
@@ -476,7 +476,9 @@ input[type="email"],
 input[type="url"],
 input[type="password"],
 input[type="search"],
-textarea {
+input[type="number"],
+textarea,
+select {
   color: #313131;
   border: 1px solid #ebebeb;
   background: #f3f3f3;
@@ -488,7 +490,9 @@ textarea {
   input[type="url"]:focus,
   input[type="password"]:focus,
   input[type="search"]:focus,
-  textarea:focus {
+  input[type="number"]:focus,
+  textarea:focus,
+  select:focus {
     color: #313131;
     outline: none;
     box-shadow: 0 0 4px rgba(0, 0, 0, 0.1) inset; }
@@ -497,7 +501,9 @@ input[type="text"],
 input[type="email"],
 input[type="url"],
 input[type="password"],
-input[type="search"] {
+input[type="search"],
+input[type="number"],
+select {
   padding: 6px 15px; }
 
 textarea {
@@ -2699,15 +2705,15 @@ img.mfp-img {
   width: 8.33333333%; }
 
 @media (max-width: 767px) {
-  .col-sm-1, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-10, .col-sm-11, .col-sm-12 {
-    float: left; }
-
   .col-md-1, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-10, .col-md-11, .col-md-12 {
     float: none; }
 
   .col-md-1, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-10, .col-md-11, .col-md-12 {
     float: none;
     width: 100%; }
+
+  .col-sm-1, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-10, .col-sm-11, .col-sm-12 {
+    float: left; }
 
   .col-sm-12 {
     width: 100%; }

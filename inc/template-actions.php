@@ -20,6 +20,7 @@ add_filter( 'comment_form_default_fields', 'azeria_comment_form_fields' );
 // modify excerpt more symbols
 add_filter( 'excerpt_more', 'azeria_excerpt_more' );
 
+
 /**
  * Get standard slider output
  */
@@ -257,3 +258,17 @@ function azeria_comment_form_fields( $fields ) {
 function azeria_excerpt_more($more) {
 	return ' ...';
 }
+
+/**
+ * Backwards compatibility for title tag
+ */
+if ( ! function_exists( '_wp_render_title_tag' ) ) :
+	
+	function azeria_render_title() {
+		?>
+		<title><?php wp_title( '|', true, 'right' ); ?></title>
+		<?php
+	}
+	add_action( 'wp_head', 'azeria_render_title' );
+
+endif;

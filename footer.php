@@ -36,8 +36,8 @@
 			<?php
 				azeria_to_top();
 				$azeria_custm_copyright = azeria_get_option( 'footer_copyright' );
-				if ( $azeria_custm_copyright ) {
-					echo $azeria_custm_copyright;
+				if ( ! empty( $azeria_custm_copyright ) ) {
+					echo esc_textarea( $azeria_custm_copyright );
 				} else {
 			?>
 				<a rel="nofollow" href="<?php echo esc_url( __( 'http://wordpress.org/', 'azeria' ) ); ?>"><?php printf( esc_html__( 'Proudly powered by %s', 'azeria' ), 'WordPress' ); ?></a>

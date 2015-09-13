@@ -23,52 +23,6 @@ function azeria_body_classes( $classes ) {
 }
 add_filter( 'body_class', 'azeria_body_classes' );
 
-if ( version_compare( $GLOBALS['wp_version'], '4.1', '<' ) ) :
-	/**
-	 * Filters wp_title to print a neat <title> tag based on what is being viewed.
-	 *
-	 * @param string $title Default title text for current view.
-	 * @param string $sep Optional separator.
-	 * @return string The filtered title.
-	 */
-	function azeria_wp_title( $title, $sep ) {
-		if ( is_feed() ) {
-			return $title;
-		}
-
-		global $page, $paged;
-
-		// Add the blog name.
-		$title .= get_bloginfo( 'name', 'display' );
-
-		// Add the blog description for the home/front page.
-		$site_description = get_bloginfo( 'description', 'display' );
-		if ( $site_description && ( is_home() || is_front_page() ) ) {
-			$title .= " $sep $site_description";
-		}
-
-		// Add a page number if necessary.
-		if ( ( $paged >= 2 || $page >= 2 ) && ! is_404() ) {
-			$title .= " $sep " . sprintf( esc_html__( 'Page %s', 'azeria' ), max( $paged, $page ) );
-		}
-
-		return $title;
-	}
-	add_filter( 'wp_title', 'azeria_wp_title', 10, 2 );
-
-	/**
-	 * Title shim for sites older than WordPress 4.1.
-	 *
-	 * @link https://make.wordpress.org/core/2014/10/29/title-tags-in-4-1/
-	 * @todo Remove this function when WordPress 4.3 is released.
-	 */
-	function azeria_render_title() {
-		?>
-		<title><?php wp_title( '|', true, 'right' ); ?></title>
-		<?php
-	}
-	add_action( 'wp_head', 'azeria_render_title' );
-endif;
 
 /**
  * Get allowed socials data (to add options into customizer and output on front)
@@ -122,7 +76,7 @@ function azeria_comment( $comment, $args, $depth ) {
 
 	<li id="comment-<?php comment_ID(); ?>" <?php comment_class(); ?>>
 		<div class="comment-body">
-			<?php _e( 'Pingback:', 'photolab' ); ?> <?php comment_author_link(); ?> <?php edit_comment_link( __( 'Edit', 'photolab' ), '<span class="edit-link">', '</span>' ); ?>
+			<?php _e( 'Pingback:', 'azeria' ); ?> <?php comment_author_link(); ?> <?php edit_comment_link( __( 'Edit', 'azeria' ), '<span class="edit-link">', '</span>' ); ?>
 		</div>
 
 	<?php else : ?>
@@ -136,7 +90,7 @@ function azeria_comment( $comment, $args, $depth ) {
 				<div class="comment-meta">
 					<?php printf( '<div class="comment-author">%s</div>', get_comment_author_link() ); ?>
 					<time datetime="<?php comment_time( 'c' ); ?>">
-						<?php echo human_time_diff( get_comment_time('U'), current_time('timestamp') ) . ' ' . __( 'ago', 'photolab' ); ?>
+						<?php echo human_time_diff( get_comment_time('U'), current_time('timestamp') ) . ' ' . __( 'ago', 'azeria' ); ?>
 					</time>
 					<?php
 						comment_reply_link( 
@@ -152,7 +106,7 @@ function azeria_comment( $comment, $args, $depth ) {
 					?>
 				</div>
 				<?php if ( '0' == $comment->comment_approved ) : ?>
-				<p class="comment-awaiting-moderation"><?php _e( 'Your comment is awaiting moderation.', 'photolab' ); ?></p>
+				<p class="comment-awaiting-moderation"><?php _e( 'Your comment is awaiting moderation.', 'azeria' ); ?></p>
 				<?php endif; ?>
 				<?php comment_text(); ?>
 			</div><!-- .comment-content -->

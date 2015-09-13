@@ -46,8 +46,8 @@ if( ! function_exists( 'azeria_add_customizer' ) ) {
 		/* Logo image */
 		$wp_customize->add_setting( 'azeria[logo_img]', array(
 				'default'           => '',
-				'type'              => 'option',
-				'sanitize_callback' => 'azeria_sanitize_url'
+				'type'              => 'theme_mod',
+				'sanitize_callback' => 'azeria_sanitize_image'
 		) );
 
 		$wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, 'azeria_logo_img', array(
@@ -69,7 +69,7 @@ if( ! function_exists( 'azeria_add_customizer' ) ) {
 		/* Enable slider */
 		$wp_customize->add_setting( 'azeria[slider_enabled]', array(
 				'default'           => '1',
-				'type'              => 'option',
+				'type'              => 'theme_mod',
 				'sanitize_callback' => 'azeria_sanitize_checkbox'
 		) );
 		$wp_customize->add_control( 'azeria_slider_enabled', array(
@@ -83,7 +83,7 @@ if( ! function_exists( 'azeria_add_customizer' ) ) {
 		/* Slider visibility */
 		$wp_customize->add_setting( 'azeria[slider_visibility]', array(
 				'default'           => 'front',
-				'type'              => 'option',
+				'type'              => 'theme_mod',
 				'sanitize_callback' => 'azeria_sanitize_select'
 		) );
 		$wp_customize->add_control( 'azeria_slider_visibility', array(
@@ -101,7 +101,7 @@ if( ! function_exists( 'azeria_add_customizer' ) ) {
 		/* Get slides from */
 		$wp_customize->add_setting( 'azeria[slides_from]', array(
 				'default'           => 'recent_posts',
-				'type'              => 'option',
+				'type'              => 'theme_mod',
 				'sanitize_callback' => 'azeria_sanitize_select'
 		) );
 		$wp_customize->add_control( 'azeria_slides_from', array(
@@ -123,7 +123,7 @@ if( ! function_exists( 'azeria_add_customizer' ) ) {
 		/* Category to get from */
 		$wp_customize->add_setting( 'azeria[slides_cat]', array(
 				'default'           => '',
-				'type'              => 'option',
+				'type'              => 'theme_mod',
 				'sanitize_callback' => 'sanitize_text_field'
 		) );
 		$wp_customize->add_control( 'azeria_slides_cat', array(
@@ -137,7 +137,7 @@ if( ! function_exists( 'azeria_add_customizer' ) ) {
 		/* Slides number */
 		$wp_customize->add_setting( 'azeria[slides_num]', array(
 				'default'           => 4,
-				'type'              => 'option',
+				'type'              => 'theme_mod',
 				'sanitize_callback' => 'azeria_sanitize_num'
 		) );
 		$wp_customize->add_control( 'azeria_slides_num', array(
@@ -156,7 +156,7 @@ if( ! function_exists( 'azeria_add_customizer' ) ) {
 		/* Show/hide slides banners */
 		$wp_customize->add_setting( 'azeria[slider_banner]', array(
 				'default'           => '1',
-				'type'              => 'option',
+				'type'              => 'theme_mod',
 				'sanitize_callback' => 'azeria_sanitize_checkbox'
 		) );
 		$wp_customize->add_control( 'azeria_slider_banner', array(
@@ -170,7 +170,7 @@ if( ! function_exists( 'azeria_add_customizer' ) ) {
 		/* Banner button text */
 		$wp_customize->add_setting( 'azeria[slider_btn_text]', array(
 				'default'           => __( 'Read', 'azeria' ),
-				'type'              => 'option',
+				'type'              => 'theme_mod',
 				'sanitize_callback' => 'sanitize_text_field'
 		) );
 		$wp_customize->add_control( 'azeria_slider_btn_text', array(
@@ -184,7 +184,7 @@ if( ! function_exists( 'azeria_add_customizer' ) ) {
 		/* Show arrows */
 		$wp_customize->add_setting( 'azeria[slider_arrows]', array(
 				'default'           => '1',
-				'type'              => 'option',
+				'type'              => 'theme_mod',
 				'sanitize_callback' => 'azeria_sanitize_checkbox'
 		) );
 		$wp_customize->add_control( 'azeria_slider_arrows', array(
@@ -198,7 +198,7 @@ if( ! function_exists( 'azeria_add_customizer' ) ) {
 		/* Show pager */
 		$wp_customize->add_setting( 'azeria[slider_pager]', array(
 				'default'           => '1',
-				'type'              => 'option',
+				'type'              => 'theme_mod',
 				'sanitize_callback' => 'azeria_sanitize_checkbox'
 		) );
 		$wp_customize->add_control( 'azeria_slider_pager', array(
@@ -212,7 +212,7 @@ if( ! function_exists( 'azeria_add_customizer' ) ) {
 		/* Animation type */
 		$wp_customize->add_setting( 'azeria[slider_animation]', array(
 				'default'           => 'slide',
-				'type'              => 'option',
+				'type'              => 'theme_mod',
 				'sanitize_callback' => 'azeria_sanitize_select'
 		) );
 		$wp_customize->add_control( 'azeria_slider_animation', array(
@@ -237,7 +237,7 @@ if( ! function_exists( 'azeria_add_customizer' ) ) {
 		/* Blog content */
 		$wp_customize->add_setting( 'azeria[blog_content]', array(
 				'default'           => 'excerpt',
-				'type'              => 'option',
+				'type'              => 'theme_mod',
 				'sanitize_callback' => 'azeria_sanitize_select'
 		) );
 		$wp_customize->add_control( 'azeria_blog_content', array(
@@ -255,7 +255,7 @@ if( ! function_exists( 'azeria_add_customizer' ) ) {
 		/* Loop featured image */
 		$wp_customize->add_setting( 'azeria[blog_loop_image]', array(
 				'default'           => '1',
-				'type'              => 'option',
+				'type'              => 'theme_mod',
 				'sanitize_callback' => 'azeria_sanitize_checkbox'
 		) );
 		$wp_customize->add_control( 'azeria_blog_loop_image', array(
@@ -269,7 +269,7 @@ if( ! function_exists( 'azeria_add_customizer' ) ) {
 		/* Single featured image */
 		$wp_customize->add_setting( 'azeria[blog_single_image]', array(
 				'default'           => '1',
-				'type'              => 'option',
+				'type'              => 'theme_mod',
 				'sanitize_callback' => 'azeria_sanitize_checkbox'
 		) );
 		$wp_customize->add_control( 'azeria_blog_single_image', array(
@@ -283,7 +283,7 @@ if( ! function_exists( 'azeria_add_customizer' ) ) {
 		/* Loop show button */
 		$wp_customize->add_setting( 'azeria[blog_more]', array(
 				'default'           => '1',
-				'type'              => 'option',
+				'type'              => 'theme_mod',
 				'sanitize_callback' => 'azeria_sanitize_checkbox'
 		) );
 		$wp_customize->add_control( 'azeria_blog_more', array(
@@ -297,7 +297,7 @@ if( ! function_exists( 'azeria_add_customizer' ) ) {
 		/* Read button text */
 		$wp_customize->add_setting( 'azeria[blog_more_text]', array(
 				'default'           => __( 'Read', 'azeria' ),
-				'type'              => 'option',
+				'type'              => 'theme_mod',
 				'sanitize_callback' => 'sanitize_text_field'
 		) );
 		$wp_customize->add_control( 'azeria_blog_more_text', array(
@@ -311,7 +311,7 @@ if( ! function_exists( 'azeria_add_customizer' ) ) {
 		/* Sidebar position */
 		$wp_customize->add_setting( 'azeria[sidebar_position]', array(
 				'default'           => 'right',
-				'type'              => 'option',
+				'type'              => 'theme_mod',
 				'sanitize_callback' => 'azeria_sanitize_select'
 		) );
 		$wp_customize->add_control( 'azeria_sidebar_position', array(
@@ -336,7 +336,7 @@ if( ! function_exists( 'azeria_add_customizer' ) ) {
 		/* Custom copyright */
 		$wp_customize->add_setting( 'azeria[footer_copyright]', array(
 				'default'           => '',
-				'type'              => 'option',
+				'type'              => 'theme_mod',
 				'sanitize_callback' => 'esc_textarea'
 		) );
 		$wp_customize->add_control( 'azeria_blog_more_text', array(
@@ -357,7 +357,7 @@ if( ! function_exists( 'azeria_add_customizer' ) ) {
 		/* Enable about */
 		$wp_customize->add_setting( 'azeria[about_enabled]', array(
 				'default'           => '1',
-				'type'              => 'option',
+				'type'              => 'theme_mod',
 				'sanitize_callback' => 'azeria_sanitize_checkbox'
 		) );
 		$wp_customize->add_control( 'azeria_about_enabled', array(
@@ -371,7 +371,7 @@ if( ! function_exists( 'azeria_add_customizer' ) ) {
 		/* About title */
 		$wp_customize->add_setting( 'azeria[about_title]', array(
 				'default'           => __( 'About Me', 'azeria' ),
-				'type'              => 'option',
+				'type'              => 'theme_mod',
 				'sanitize_callback' => 'sanitize_text_field'
 		) );
 		$wp_customize->add_control( 'azeria_about_title', array(
@@ -385,8 +385,8 @@ if( ! function_exists( 'azeria_add_customizer' ) ) {
 		/* About image */
 		$wp_customize->add_setting( 'azeria[about_img]', array(
 				'default'           => '',
-				'type'              => 'option',
-				'sanitize_callback' => 'azeria_sanitize_url'
+				'type'              => 'theme_mod',
+				'sanitize_callback' => 'azeria_sanitize_image'
 		) );
 
 		$wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, 'azeria_about_img', array(
@@ -399,7 +399,7 @@ if( ! function_exists( 'azeria_add_customizer' ) ) {
 		/* About message */
 		$wp_customize->add_setting( 'azeria[about_message]', array(
 				'default'           => __( 'Hello! And welcome to my personal website!', 'azeria' ),
-				'type'              => 'option',
+				'type'              => 'theme_mod',
 				'sanitize_callback' => 'esc_textarea'
 		) );
 		$wp_customize->add_control( 'azeria_about_message', array(
@@ -420,7 +420,7 @@ if( ! function_exists( 'azeria_add_customizer' ) ) {
 		/* Enable follow */
 		$wp_customize->add_setting( 'azeria[follow_enabled]', array(
 				'default'           => '1',
-				'type'              => 'option',
+				'type'              => 'theme_mod',
 				'sanitize_callback' => 'azeria_sanitize_checkbox'
 		) );
 		$wp_customize->add_control( 'azeria_follow_enabled', array(
@@ -434,7 +434,7 @@ if( ! function_exists( 'azeria_add_customizer' ) ) {
 		/* Follow title */
 		$wp_customize->add_setting( 'azeria[follow_title]', array(
 				'default'           => __( 'Follow Me', 'azeria' ),
-				'type'              => 'option',
+				'type'              => 'theme_mod',
 				'sanitize_callback' => 'sanitize_text_field'
 		) );
 		$wp_customize->add_control( 'azeria_follow_title', array(
@@ -457,8 +457,8 @@ if( ! function_exists( 'azeria_add_customizer' ) ) {
 				
 				$wp_customize->add_setting( 'azeria[follow_' . $net . ']', array(
 						'default'           => $data['default'],
-						'type'              => 'option',
-						'sanitize_callback' => 'esc_url'
+						'type'              => 'theme_mod',
+						'sanitize_callback' => 'azeria_sanitize_url'
 				) );
 				$wp_customize->add_control( 'azeria_follow_' . $net, array(
 						'label'       => sprintf( __( 'Link to %s account:', 'azeria' ), $data['label'] ),
@@ -477,25 +477,75 @@ if( ! function_exists( 'azeria_add_customizer' ) ) {
 
 /**
  * Sanitize URL function for customizer
+ *
+ * @copyright Copyright (c) 2015, WordPress Theme Review Team
  */
-function azeria_sanitize_url( $input ) {
-	return esc_url( $input );
+function azeria_sanitize_url( $url ) {
+	return esc_url_raw( $url );
+}
+
+/**
+ * Sanitize image URL
+ *
+ * @copyright Copyright (c) 2015, WordPress Theme Review Team
+ */
+function azeria_sanitize_image( $image, $setting ) {
+	/*
+	 * Array of valid image file types.
+	 *
+	 * The array includes image mime types that are included in wp_get_mime_types()
+	 */
+    $mimes = array(
+        'jpg|jpeg|jpe' => 'image/jpeg',
+        'gif'          => 'image/gif',
+        'png'          => 'image/png',
+        'bmp'          => 'image/bmp',
+        'tif|tiff'     => 'image/tiff',
+        'ico'          => 'image/x-icon'
+    );
+	// Return an array with file extension and mime_type.
+    $file = wp_check_filetype( $image, $mimes );
+	// If $image has a valid mime_type, return it; otherwise, return the default.
+    return ( $file['ext'] ? $image : $setting->default );
 }
 
 /**
  * Sanitize checkbox for customizer
+ *
+ * @copyright Copyright (c) 2015, WordPress Theme Review Team
  */
-function azeria_sanitize_checkbox( $input ) {
-	return (bool)$input;
+function azeria_sanitize_checkbox( $checked ) {
+	return ( ( isset( $checked ) && true == $checked ) ? true : false );
 }
 
 /**
  * Sanitize callback select input
+ *
+ * @copyright Copyright (c) 2015, WordPress Theme Review Team
  */
-function azeria_sanitize_select( $input ) {
-	return esc_attr( $input );
+function azeria_sanitize_select( $input, $setting ) {
+	
+	// Ensure input is a slug.
+	$input = sanitize_key( $input );
+
+	$control = str_replace( '[', '_', trim( $setting->id, ']' ) );
+	
+	// Get list of choices from the control associated with the setting.
+	$choices = $setting->manager->get_control( $control )->choices;
+
+	// If the input is a valid key, return it; otherwise, return the default.
+	return ( array_key_exists( $input, $choices ) ? $input : $setting->default );
 }
 
-function azeria_sanitize_num( $input ) {
-	return absint( $input );
+/**
+ * Sanitize numeric value
+ *
+ * @copyright Copyright (c) 2015, WordPress Theme Review Team
+ */
+function azeria_sanitize_num( $number ) {
+	// Ensure $number is an absolute integer (whole number, zero or greater).
+	$number = absint( $number );
+	
+	// If the input is an absolute integer, return it; otherwise, return the default
+	return ( $number ? $number : $setting->default );
 }

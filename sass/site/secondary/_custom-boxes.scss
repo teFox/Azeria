@@ -32,15 +32,15 @@ $color__dribble: #ea4c89;
 				color: #fff;
 			}
 			&.item-facebook {
-				background: $color__twitter;
-				&:hover {
-					background: darken($color__twitter, 10%);
-				}
-			}
-			&.item-twitter {
 				background: $color__facebook;
 				&:hover {
 					background: darken($color__facebook, 10%);
+				}
+			}
+			&.item-twitter {
+				background: $color__twitter;
+				&:hover {
+					background: darken($color__twitter, 10%);
 				}
 			}
 			&.item-google-plus {

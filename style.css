@@ -1,19 +1,17 @@
 @charset "UTF-8";
 /*
 Theme Name: azeria
-Theme Name: azeria
 Theme URI: http://www.tefox.net/products/azeria
 Author: teFox
 Author URI: http://www.tefox.net/
-Description: Free responsive WordPress theme is here for your reference. Clean minimalistic design is free to change up to your business needs and personal wishes. It could be a pertect starting point for creating your own "home" in the web.
-Version: 1.0.1
+Description: Azeria responsive WordPress theme is here for your reference. Clean minimalistic design is free to change up to your business needs and personal wishes. It could be a pertect starting point for creating your own "home" in the web.
+Version: 1.0.4
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: azeria
 Tags: light, two-columns, fluid-layout, responsive-layout, custom-background, custom-menu, featured-images, full-width-template, post-formats, sticky-post, translation-ready, photoblogging, theme-options
 
 This theme, like WordPress, is licensed under the GPL.
-Use it to make something cool, have fun, and share what you've learned with others.
 
 Azeria is based on Underscores http://underscores.me/, (C) 2012-2015 Automattic, Inc.
 Underscores is distributed under the terms of the GNU GPL v2 or later.
@@ -1208,13 +1206,13 @@ button.menu-toggle {
     .custom-box-follow-item > a:hover, .custom-box-follow-item > a:active, .custom-box-follow-item > a:focus, .custom-box-follow-item > a:visited {
       color: #fff; }
     .custom-box-follow-item > a.item-facebook {
-      background: #00aced; }
-      .custom-box-follow-item > a.item-facebook:hover {
-        background: #0087ba; }
-    .custom-box-follow-item > a.item-twitter {
       background: #3b5998; }
-      .custom-box-follow-item > a.item-twitter:hover {
+      .custom-box-follow-item > a.item-facebook:hover {
         background: #2d4373; }
+    .custom-box-follow-item > a.item-twitter {
+      background: #00aced; }
+      .custom-box-follow-item > a.item-twitter:hover {
+        background: #0087ba; }
     .custom-box-follow-item > a.item-google-plus {
       background: #dd4b39; }
       .custom-box-follow-item > a.item-google-plus:hover {

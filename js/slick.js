@@ -13,6 +13,8 @@
     Repo: http://github.com/kenwheeler/slick
   Issues: http://github.com/kenwheeler/slick/issues
 
+  The MIT License (MIT)
+
  */
 /* global window, document, define, jQuery, setInterval, clearInterval */
 (function(factory) {

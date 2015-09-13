@@ -3,7 +3,6 @@
  * Sample implementation of the Custom Header feature
  * http://codex.wordpress.org/Custom_Headers
  *
- *
  * @package azeria
  */
 
@@ -29,6 +28,7 @@ function azeria_custom_header_setup() {
 add_action( 'after_setup_theme', 'azeria_custom_header_setup' );
 
 if ( ! function_exists( 'azeria_header_style' ) ) :
+
 /**
  * Styles the header image and text displayed on the blog
  *

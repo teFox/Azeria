@@ -53,7 +53,7 @@ function azeria_slider() {
 				$query_args['category_name'] = esc_attr( $category );
 			}
 			break;
-		
+
 		case 'sticky':
 			$sticky = get_option( 'sticky_posts' );
 			if ( ! empty( $sticky ) ) {
@@ -99,20 +99,20 @@ function azeria_slider() {
 			'fade'   => false,
 			'arrows' => true,
 			'dots'   => true,
-			'speed'  => 400
-		) 
+			'speed'  => 400,
+		)
 	);
 
 	$fade   = ( 'fade' == azeria_get_option( 'slider_animation', 'slide' ) );
 	$arrows = azeria_get_option( 'slider_arrows', true );
 	$pager  = azeria_get_option( 'slider_pager', true );
 
-	$slider_args = wp_parse_args( 
+	$slider_args = wp_parse_args(
 		array(
-			'fade'   => (bool)$fade,
-			'arrows' => (bool)$arrows,
-			'dots'   => (bool)$pager
-		), 
+			'fade'   => (bool) $fade,
+			'arrows' => (bool) $arrows,
+			'dots'   => (bool) $pager,
+		),
 		$slider_defaults
 	);
 
@@ -124,7 +124,7 @@ function azeria_slider() {
 	/**
 	 * Filter slider output before printing
 	 */
-	$result = apply_filters( 
+	$result = apply_filters(
 		'azeria_slider_output',
 		sprintf( '<div class="slider-box" data-args=\'%2$s\'>%1$s</div>', $result, $slider_args )
 	);
@@ -132,10 +132,10 @@ function azeria_slider() {
 	echo $result;
 
 }
-	
+
 /**
  * Get slider banner content by post ID
- * 
+ *
  * @param  int    $post_id  post ID to get banner for
  * @param  string $btn_text banner button text
  */
@@ -189,6 +189,9 @@ function azeria_about_box() {
 	<?php
 }
 
+/**
+ * Show social follow box in sidebar
+ */
 function azeria_follow_box() {
 
 	$is_enabled = azeria_get_option( 'follow_enabled', true );
@@ -210,7 +213,7 @@ function azeria_follow_box() {
 	$item_format = '<div class="custom-box-follow-item"><a href="%1$s" class="item-%3$s"><i class="%2$s"></i></a></div>';
 
 	foreach ( $socials as $net => $data ) {
-		
+
 		$data = wp_parse_args( $data, array( 'label' => '', 'icon' => '', 'default' => '' ) );
 		$url  = azeria_get_option( 'follow_' . $net, $data['default'] );
 
@@ -255,7 +258,7 @@ function azeria_comment_form_fields( $fields ) {
 /**
  * Replace default excerpt more symbols
  */
-function azeria_excerpt_more($more) {
+function azeria_excerpt_more( $more ) {
 	return ' ...';
 }
 
@@ -263,7 +266,7 @@ function azeria_excerpt_more($more) {
  * Backwards compatibility for title tag
  */
 if ( ! function_exists( '_wp_render_title_tag' ) ) :
-	
+
 	function azeria_render_title() {
 		?>
 		<title><?php wp_title( '|', true, 'right' ); ?></title>

@@ -1,6 +1,6 @@
 <?php
 /**
- * azeria functions and definitions
+ * Azeria functions and definitions
  *
  * @package azeria
  */
@@ -53,44 +53,44 @@ function azeria_setup() {
 		'post-thumbnail' => array(
 			'width'  => 730,
 			'height' => 360,
-			'crop'   => true
+			'crop'   => true,
 		),
 		'slider-thumbnail' => array(
 			'width'  => 1900,
 			'height' => 445,
-			'crop'   => true
+			'crop'   => true,
 		),
 		'related-thumbnail' => array(
 			'width'  => 210,
 			'height' => 180,
-			'crop'   => true
-		)
+			'crop'   => true,
+		),
 	);
 
-	$image_sizes = wp_parse_args( 
-		apply_filters( 'azeria_image_sizes', $default_image_sizes ), 
+	$image_sizes = wp_parse_args(
+		apply_filters( 'azeria_image_sizes', $default_image_sizes ),
 		$default_image_sizes
 	);
 
 	// default post thumbnail size
-	set_post_thumbnail_size( 
-		$image_sizes['post-thumbnail']['width'], 
-		$image_sizes['post-thumbnail']['height'], 
-		$image_sizes['post-thumbnail']['crop'] 
+	set_post_thumbnail_size(
+		$image_sizes['post-thumbnail']['width'],
+		$image_sizes['post-thumbnail']['height'],
+		$image_sizes['post-thumbnail']['crop']
 	);
 
 	// single slide thumbnail
-	add_image_size( 'azeria-slider-thumbnail', 
-		$image_sizes['slider-thumbnail']['width'], 
-		$image_sizes['slider-thumbnail']['height'], 
-		$image_sizes['slider-thumbnail']['crop']  
+	add_image_size( 'azeria-slider-thumbnail',
+		$image_sizes['slider-thumbnail']['width'],
+		$image_sizes['slider-thumbnail']['height'],
+		$image_sizes['slider-thumbnail']['crop']
 	);
 
 	// related post thumbnail
-	add_image_size( 'azeria-related-thumbnail', 
-		$image_sizes['related-thumbnail']['width'], 
-		$image_sizes['related-thumbnail']['height'], 
-		$image_sizes['related-thumbnail']['crop']  
+	add_image_size( 'azeria-related-thumbnail',
+		$image_sizes['related-thumbnail']['width'],
+		$image_sizes['related-thumbnail']['height'],
+		$image_sizes['related-thumbnail']['crop']
 	);
 
 	// This theme uses wp_nav_menu() in one location.
@@ -180,7 +180,7 @@ add_action( 'widgets_init', 'azeria_widgets_init' );
  * Enqueue scripts and styles.
  */
 function azeria_assets() {
-	
+
 	// Styles
 	wp_enqueue_style( 'azeria-fonts', azeria_fonts_url() );
 	wp_enqueue_style( 'azeria-font-awesome', get_template_directory_uri() . '/css/font-awesome.min.css', false, '4.3.0' );
@@ -208,19 +208,22 @@ function azeria_fonts_url() {
 	$locale = get_locale();
 	$cyrillic_locales = array( 'ru_RU', 'mk_MK', 'ky_KY', 'bg_BG', 'sr_RS', 'uk', 'bel' );
 
-	/* Translators: If there are characters in your language that are not
+	/**
+	 * Translators: If there are characters in your language that are not
 	 * supported by Montserrat Alternates, translate this to 'off'. Do not translate
 	 * into your own language.
 	 */
 	$montserrat = _x( 'on', 'Montserrat Alternates font: on or off', 'azeria' );
 
-	/* Translators: If there are characters in your language that are not
+	/**
+	 * Translators: If there are characters in your language that are not
 	 * supported by Open Sans Condensed, translate this to 'off'. Do not translate
 	 * into your own language.
 	 */
 	$open_sans_condensed = _x( 'on', 'Open Sans Condensed font: on or off', 'azeria' );
 
-	/* Translators: If there are characters in your language that are not
+	/**
+	 * Translators: If there are characters in your language that are not
 	 * supported by Open Sans, translate this to 'off'. Do not translate
 	 * into your own language.
 	 */
@@ -254,13 +257,13 @@ function azeria_fonts_url() {
 	}
 
 	$fonts_url = add_query_arg( $query_args, '//fonts.googleapis.com/css' );
-	
+
 	return $fonts_url;
 }
 
 /**
  * Get theme option by name
- * 
+ *
  * @param  string $name    option name
  * @param  mixed  $default default option value
  */
@@ -268,8 +271,8 @@ function azeria_get_option( $name, $default = false ) {
 
 	$all_options = get_theme_mod( 'azeria' );
 
-	if ( is_array( $all_options ) && isset( $all_options[$name] ) ) {
-		return $all_options[$name];
+	if ( is_array( $all_options ) && isset( $all_options[ $name ] ) ) {
+		return $all_options[ $name ];
 	}
 
 	return $default;

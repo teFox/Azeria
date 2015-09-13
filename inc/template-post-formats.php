@@ -287,5 +287,5 @@ function azeria_post_video() {
 	}
 
 	printf( '<div class="entry-video embed-responsive embed-responsive-16by9">%s</div>', $result );
-	
+
 }

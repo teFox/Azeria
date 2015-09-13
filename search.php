@@ -31,12 +31,12 @@ get_header(); ?>
 			<?php endwhile; ?>
 
 			<?php
-				the_posts_pagination( 
-					array( 
+				the_posts_pagination(
+					array(
 						'prev_text' => '<i class="fa fa-angle-double-left"></i>',
-						'next_text' => '<i class="fa fa-angle-double-right"></i>'
+						'next_text' => '<i class="fa fa-angle-double-right"></i>',
 					)
-				); 
+				);
 			?>
 
 		<?php else : ?>

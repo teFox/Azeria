@@ -24,9 +24,9 @@ function azeria_post_author() {
  * Prints HTML with meta information for the current post-date.
  */
 function azeria_post_date() {
-	
+
 	$time_string = '<time class="entry-date published updated" datetime="%1$s">%2$s</time>';
-	
+
 	if ( get_the_time( 'U' ) !== get_the_modified_time( 'U' ) ) {
 		$time_string = '<time class="entry-date published" datetime="%1$s">%2$s</time><time class="updated" datetime="%3$s">%4$s</time>';
 	}
@@ -48,11 +48,11 @@ function azeria_post_date() {
  * Prints HTML with meta information for the current post-date.
  */
 function azeria_post_comments() {
-	
+
 	if ( post_password_required() || ! comments_open() ) {
 		return;
 	}
-	
+
 	echo '<span class="entry-meta-item comments"><i class="fa fa-pencil-square-o"></i> ';
 	comments_popup_link( esc_html__( 'Leave a comment', 'azeria' ), esc_html__( '1 Comment', 'azeria' ), esc_html__( '% Comments', 'azeria' ) );
 	echo '</span>';
@@ -81,7 +81,7 @@ function azeria_post_tags() {
 	if ( 'post' != get_post_type() ) {
 		return;
 	}
-		
+
 	$tags_list = get_the_tag_list( '', esc_html__( ', ', 'azeria' ) );
 	if ( $tags_list ) {
 		printf( '<span class="entry-meta-item tags-links"><i class="fa fa-tags"></i> ' . esc_html__( 'Tagged %1$s', 'azeria' ) . '</span>', $tags_list ); // WPCS: XSS OK.
@@ -194,7 +194,7 @@ function azeria_format_icon( $format = 'standard' ) {
 		'gallery'  => 'picture-o',
 		'video'    => 'video-camera',
 		'quote'    => 'quote-left',
-		'link'     => 'link'
+		'link'     => 'link',
 	);
 
 	if ( ! array_key_exists( $format, $formats ) ) {
@@ -223,31 +223,31 @@ function azeria_post_meta( $page = 'loop', $position = 'header', $disable = arra
 			'page'     => $page,
 			'position' => 'header',
 			'callback' => 'azeria_post_author',
-			'priority' => 1
+			'priority' => 1,
 		),
 		'date' => array(
 			'page'     => $page,
 			'position' => 'header',
 			'callback' => 'azeria_post_date',
-			'priority' => 5
+			'priority' => 5,
 		),
 		'comments' => array(
 			'page'     => $page,
 			'position' => 'header',
 			'callback' => 'azeria_post_comments',
-			'priority' => 5
+			'priority' => 5,
 		),
 		'categories' => array(
 			'page'     => 'single',
 			'position' => 'footer',
 			'callback' => 'azeria_post_categories',
-			'priority' => 1
+			'priority' => 1,
 		),
 		'tags' => array(
 			'page'     => 'single',
 			'position' => 'footer',
 			'callback' => 'azeria_post_tags',
-			'priority' => 5
+			'priority' => 5,
 		)
 	);
 
@@ -353,7 +353,7 @@ function azeria_sidebar_class() {
  */
 function azeria_to_top() {
 
-	echo apply_filters( 
+	echo apply_filters(
 		'azeria_to_top_button',
 		'<div id="back-top" class="back-top-btn"><a href="#"><i class="fa fa-angle-up"></i></a></div>'
 	);

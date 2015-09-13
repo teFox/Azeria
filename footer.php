@@ -15,9 +15,9 @@
 		<div class="footer-widget-area">
 			<div class="container">
 				<div class="row">
-				<?php 
+				<?php
 					foreach ( array( 'footer-sidebar-1', 'footer-sidebar-2', 'footer-sidebar-3' ) as $footer_sidebar ) {
-						
+
 						if ( ! is_active_sidebar( $footer_sidebar ) ) {
 							continue;
 						}

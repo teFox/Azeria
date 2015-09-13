@@ -6,7 +6,7 @@
  */
 ?>
 <article id="post-<?php the_ID(); ?>" <?php post_class( 'is-loop' ); ?>>
-	
+
 	<header class="entry-header">
 		<?php azeria_format_icon( 'standard' ); ?>
 		<div class="entry-header-data">
@@ -23,7 +23,7 @@
 		<?php azeria_blog_content(); ?>
 	</div><!-- .entry-content -->
 	<footer class="entry-footer">
-		<?php 
+		<?php
 			azeria_post_meta( 'loop', 'footer' );
 			azeria_read_more();
 		?>

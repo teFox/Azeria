@@ -33,13 +33,13 @@
 		<nav id="site-navigation" class="main-navigation" role="navigation">
 			<div class="container">
 				<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Menu', 'azeria' ); ?></button>
-				<?php 
-					wp_nav_menu( 
-						array( 
-							'theme_location' => 'primary', 
-							'menu_id'        => 'primary-menu' 
-						) 
-					); 
+				<?php
+					wp_nav_menu(
+						array(
+							'theme_location' => 'primary',
+							'menu_id'        => 'primary-menu',
+						)
+					);
 				?>
 			</div>
 		</nav><!-- #site-navigation -->
@@ -49,3 +49,4 @@
 
 	<div id="content" class="site-content">
 		<div class="container">
+			

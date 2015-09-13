@@ -50,7 +50,7 @@ if ( post_password_required() ) {
 				wp_list_comments( array(
 					'style'      => 'ol',
 					'short_ping' => true,
-					'callback'   => 'azeria_comment'
+					'callback'   => 'azeria_comment',
 				) );
 			?>
 		</ol><!-- .comment-list -->
@@ -76,13 +76,13 @@ if ( post_password_required() ) {
 		<p class="no-comments"><?php esc_html_e( 'Comments are closed.', 'azeria' ); ?></p>
 	<?php endif; ?>
 
-	<?php 
+	<?php
 		$args = array(
 			'comment_field'  => '<p class="comment-form-comment"><textarea id="comment" name="comment" cols="45" rows="8" placeholder="' . __( 'Comment*', 'azeria' ) . '" aria-required="true"></textarea></p>',
 			'title_reply'    => '<span>' . __( 'Leave a Reply', 'azeria' ) . '</span>',
-			'title_reply_to' => '<span>' . __( 'Leave a Reply to %s', 'azeria' ) . '</span>'
+			'title_reply_to' => '<span>' . __( 'Leave a Reply to %s', 'azeria' ) . '</span>',
 		);
-		comment_form( $args ); 
+		comment_form( $args );
 	?>
 
 </div><!-- #comments -->

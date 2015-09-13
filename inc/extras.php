@@ -35,32 +35,32 @@ function azeria_allowed_socials() {
 			'facebook' => array(
 				'label'   => __( 'Facebook', 'azeria' ),
 				'icon'    => 'fa fa-facebook',
-				'default' => 'https://www.facebook.com/'
+				'default' => 'https://www.facebook.com/',
 			),
 			'twitter' => array(
 				'label'   => __( 'Twitter', 'azeria' ),
 				'icon'    => 'fa fa-twitter',
-				'default' => 'https://twitter.com/'
+				'default' => 'https://twitter.com/',
 			),
 			'google-plus' => array(
 				'label'   => __( 'Google +', 'azeria' ),
 				'icon'    => 'fa fa-google-plus',
-				'default' => 'https://plus.google.com/'
+				'default' => 'https://plus.google.com/',
 			),
 			'instagram' => array(
 				'label'   => __( 'Instagram', 'azeria' ),
 				'icon'    => 'fa fa-instagram',
-				'default' => 'https://instagram.com/'
+				'default' => 'https://instagram.com/',
 			),
 			'pinterest' => array(
 				'label'   => __( 'Pinterest', 'azeria' ),
 				'icon'    => 'fa fa-pinterest',
-				'default' => 'https://www.pinterest.com/'
+				'default' => 'https://www.pinterest.com/',
 			),
 			'dribbble' => array(
 				'label'   => __( 'Dribbble', 'azeria' ),
 				'icon'    => 'fa fa-dribbble',
-				'default' => 'https://dribbble.com/'
+				'default' => 'https://dribbble.com/',
 			)
 		)
 	);
@@ -90,10 +90,10 @@ function azeria_comment( $comment, $args, $depth ) {
 				<div class="comment-meta">
 					<?php printf( '<div class="comment-author">%s</div>', get_comment_author_link() ); ?>
 					<time datetime="<?php comment_time( 'c' ); ?>">
-						<?php echo human_time_diff( get_comment_time('U'), current_time('timestamp') ) . ' ' . __( 'ago', 'azeria' ); ?>
+						<?php echo human_time_diff( get_comment_time( 'U' ), current_time( 'timestamp' ) ) . ' ' . __( 'ago', 'azeria' ); ?>
 					</time>
 					<?php
-						comment_reply_link( 
+						comment_reply_link(
 							array_merge( $args, array(
 								'add_below' => 'div-comment',
 								'depth'     => $depth,
